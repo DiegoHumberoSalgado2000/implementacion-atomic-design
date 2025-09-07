@@ -33,7 +33,7 @@ export default function SpeakerDetail({ speaker }) {
                 )}
               </div>
 
-              <div className="flex justify-center mt-2">
+              <div className="hidden md:flex justify-center mt-2">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 flex items-center justify-center relative group">
                     {/* Fondo con gradiente animado */}
@@ -61,27 +61,37 @@ export default function SpeakerDetail({ speaker }) {
             </div>
 
             <div className="bg-white rounded-2xl shadow-md p-8 md:flex-1 md:max-w-[750px] w-full relative order-1 md:order-2">
-              <button className="absolute top-4 right-4 flex items-center gap-2 px-3 py-2 border rounded-lg hover:bg-gray-50">
+              <button className="hidden md:flex absolute top-4 right-4 items-center gap-2 px-3 py-2 border rounded-lg hover:bg-gray-50">
                 <Share2 size={18} />
                 <span className="hidden sm:inline text-sm">Share</span>
               </button>
-              <div className="space-y-6">
+
+              <div className="space-y-4 text-sm md:space-y-6 md:text-base">
+                <div className="flex  items-center gap-4 md:hidden">
+                  <button className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-pink-100">
+                    <Instagram className="text-pink-600" size={28} />
+                  </button>
+
+                  <button className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200">
+                    <Share2 size={18} />
+                  </button>
+                </div>
                 <div>
-                  <span className="uppercase text-sm tracking-wide text-gray-500">
+                  <span className="uppercase tracking-wide text-gray-500 text-xs md:text-sm">
                     Speaker
                   </span>
                 </div>
                 <div>
-                  <h1 className="text-6xl font-bold tracking-tight">
+                  <h1 className="text-2xl font-bold tracking-tight md:text-6xl">
                     {speaker.name}
                   </h1>
                 </div>
 
                 <div className="space-y-1">
-                  <p className="text-xl text-gray-800 font-medium">
+                  <p className="text-base md:text-xl text-gray-800 font-medium">
                     {speaker.role}
                   </p>
-                  <p className="text-md text-gray-500">{speaker.company}</p>
+                  <p className="text-sm md:text-md text-gray-500">{speaker.company}</p>
                 </div>
 
                 {speaker.tags?.length > 0 && (
@@ -92,7 +102,7 @@ export default function SpeakerDetail({ speaker }) {
                   </div>
                 )}
 
-                <p className="text-gray-700 leading-relaxed text-lg">
+                <p className="text-gray-700 leading-snug md:leading-relaxed md:text-lg">
                   {speaker.description}
                 </p>
 
