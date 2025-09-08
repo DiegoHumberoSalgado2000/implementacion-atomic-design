@@ -5,7 +5,7 @@ export const speakers = [
     name: "Bernardo A. Saenz",
     role: "Cofundador Fortaleciendo",
     company: "Junta Directiva AFENCO",
-    description: "Docente y Speaker especializado en fortalecimiento empresarial",
+    description: "Docente y Speaker especializado en fortalecimiento empresarial, con amplia experiencia en la formación de equipos de alto rendimiento y en el diseño de estrategias que impulsan la innovación, la productividad y el crecimiento sostenible de las organizaciones. Su trayectoria combina el ámbito académico con la práctica profesional, lo que le permite transmitir conocimientos de manera clara, dinámica y aplicable a la realidad de cada empresa",
     tags: ["Liderazgo", "Gestión Empresarial"],
     tagsBelow: ["Liderazgo", "Gestion Empresarial", "Desarrollo Organizacional"],
     country:"Colombia",

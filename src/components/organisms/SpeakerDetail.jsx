@@ -32,7 +32,15 @@ export default function SpeakerDetail({ speaker }) {
                   />
                 )}
               </div>
+              <div className="absolute top-44 flex items-center gap-3 md:hidden">
+                <button className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-pink-100">
+                  <Instagram className="text-pink-600" size={28} />
+                </button>
 
+                <button className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200">
+                  <Share2 size={18} />
+                </button>
+              </div>
               <div className="hidden md:flex justify-center mt-2">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 flex items-center justify-center relative group">
@@ -60,22 +68,13 @@ export default function SpeakerDetail({ speaker }) {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-md p-8 md:flex-1 md:max-w-[750px] w-full relative order-1 md:order-2">
+            <div className="bg-white md:rounded-2xl md:shadow-md md:p-6 order-1 md:w-full">
               <button className="hidden md:flex absolute top-4 right-4 items-center gap-2 px-3 py-2 border rounded-lg hover:bg-gray-50">
                 <Share2 size={18} />
                 <span className="hidden sm:inline text-sm">Share</span>
               </button>
 
               <div className="space-y-4 text-sm md:space-y-6 md:text-base">
-                <div className="flex  items-center gap-4 md:hidden">
-                  <button className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-pink-100">
-                    <Instagram className="text-pink-600" size={28} />
-                  </button>
-
-                  <button className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200">
-                    <Share2 size={18} />
-                  </button>
-                </div>
                 <div>
                   <span className="uppercase tracking-wide text-gray-500 text-xs md:text-sm">
                     Speaker
@@ -91,7 +90,9 @@ export default function SpeakerDetail({ speaker }) {
                   <p className="text-base md:text-xl text-gray-800 font-medium">
                     {speaker.role}
                   </p>
-                  <p className="text-sm md:text-md text-gray-500">{speaker.company}</p>
+                  <p className="text-sm md:text-md text-gray-500">
+                    {speaker.company}
+                  </p>
                 </div>
 
                 {speaker.tags?.length > 0 && (
