@@ -25,8 +25,6 @@ export default async function SpeakerDetailPage({ params }) {
   }
 
   return (
-    <DetailTemplate>
     <SpeakerDetail speaker={speaker}/>
-    </DetailTemplate>
   );
 }
